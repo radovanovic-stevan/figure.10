@@ -8,6 +8,7 @@ const ALBUMS = [
   { id: "met", name: "Meteora",            year: 2003 },
   { id: "mtm", name: "Minutes to Midnight", year: 2007 },
   { id: "ats", name: "A Thousand Suns",    year: 2010 },
+  { id: "lt",  name: "Living Things",      year: 2012 },
   { id: "thp", name: "The Hunting Party",  year: 2014 },
   { id: "oml", name: "One More Light",     year: 2017 },
   { id: "fz",  name: "From Zero",          year: 2024 },
@@ -230,6 +231,63 @@ const SONGS = [
     "When you've suffered enough / And your spirit is breaking",
     "When life leaves us blind / Love keeps us kind",
     "Listen to your heart / Those angel voices",
+  ]},
+
+  // ---------- Living Things ----------
+  { title: "Lost in the Echo", album: "lt", lyrics: [
+    "You were that foundation / Never gonna be another one, no",
+    "In these promises broken, deep below / Each word gets lost in the echo",
+    "Hold myself up and love my scars",
+  ]},
+  { title: "In My Remains", album: "lt", lyrics: [
+    "Separate / Sifting through the wreckage / I can't concentrate",
+    "Set the silence free / To wash away the worst of me",
+    "Like an army, falling / One by one by one",
+  ]},
+  { title: "Burn It Down", album: "lt", lyrics: [
+    "The cycle repeated / As explosions broke in the sky",
+    "I played soldier, you played king / Struck me down when I kissed that ring",
+    "The colors conflicted / As the flames climbed into the clouds",
+  ]},
+  { title: "Lies Greed Misery", album: "lt", aliases: ["Lies, Greed, Misery"], lyrics: [
+    "I'ma be that nail in your coffin",
+    "Now, let me show you / Exactly how the breaking point sounds",
+    "You did it to yourself and it's over",
+  ]},
+  { title: "I'll Be Gone", album: "lt", lyrics: [
+    "Like shining oil, this night is dripping down",
+    "When the lights go out and we open our eyes",
+    "This air between us is getting thinner now / Into winter now, bittersweet",
+  ]},
+  { title: "Castle of Glass", album: "lt", lyrics: [
+    "Take me down to the river bend / Take me down to the fightin' end",
+    "Fly me up on a silver wing / Past the black where the sirens sing",
+    "Warm me up in a nova's glow / And drop me down to the dream below",
+  ]},
+  { title: "Victimized", album: "lt", lyrics: [
+    "No regret for the confidence betrayed / No more hiding in shadow",
+    "For you snakes in the grass, supplying the venom",
+    "I ain't scared of your teeth, I admire what's in 'em",
+  ]},
+  { title: "Roads Untraveled", album: "lt", lyrics: [
+    "'Cause beyond every bend is a long blinding end",
+    "'Cause the love that you lost wasn't worth what it cost",
+    "May your love never end, and if you need a friend",
+  ]},
+  { title: "Skin to Bone", album: "lt", lyrics: [
+    "Ash to ashes, dust to dust",
+    "Your deception, my disgust",
+    "As the starlight fades to grey / I'll be marching far away",
+  ]},
+  { title: "Until It Breaks", album: "lt", lyrics: [
+    "I was born with the hunger of a lion, the strength of a sun",
+    "My mama taught me words, my daddy built rockets",
+    "Give me the strength of the rising sun / Give me the truth of the words unsung",
+  ]},
+  { title: "Powerless", album: "lt", lyrics: [
+    "You hid your skeletons when I had shown you mine",
+    "Ten thousand promises, ten thousand ways to lose",
+    "I'm left with emptiness that words cannot defend",
   ]},
 
   // ---------- The Hunting Party ----------
