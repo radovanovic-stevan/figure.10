@@ -3,6 +3,9 @@
 A static Linkin Park lyrics quiz. You get a random lyric excerpt and type the song title
 (matching ignores case, spaces and punctuation).
 
+Retro 8-bit look with an original chiptune rock soundtrack, synthesized live in the browser
+(`music.js`, Web Audio API — no audio files). Toggle it with the ♪ button in the top-right corner.
+
 Covers every vocal track from Hybrid Theory, Meteora, Minutes to Midnight, A Thousand Suns,
 Living Things, The Hunting Party, One More Light and From Zero — 83 songs, 3 excerpts each (`songs.js`).
 

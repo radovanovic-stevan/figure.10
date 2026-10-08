@@ -4,14 +4,14 @@
 // spaces and punctuation, so they're only needed for genuinely different spellings).
 
 const ALBUMS = [
-  { id: "ht",  name: "Hybrid Theory",      year: 2000 },
-  { id: "met", name: "Meteora",            year: 2003 },
-  { id: "mtm", name: "Minutes to Midnight", year: 2007 },
-  { id: "ats", name: "A Thousand Suns",    year: 2010 },
-  { id: "lt",  name: "Living Things",      year: 2012 },
-  { id: "thp", name: "The Hunting Party",  year: 2014 },
-  { id: "oml", name: "One More Light",     year: 2017 },
-  { id: "fz",  name: "From Zero",          year: 2024 },
+  { id: "ht",  name: "Hybrid Theory",       year: 2000, color: "#c9b48a" },
+  { id: "met", name: "Meteora",             year: 2003, color: "#f08a24" },
+  { id: "mtm", name: "Minutes to Midnight", year: 2007, color: "#e8e8e8" },
+  { id: "ats", name: "A Thousand Suns",     year: 2010, color: "#ff3b30" },
+  { id: "lt",  name: "Living Things",       year: 2012, color: "#7fc8e0" },
+  { id: "thp", name: "The Hunting Party",   year: 2014, color: "#e6c229" },
+  { id: "oml", name: "One More Light",      year: 2017, color: "#ff9fb2" },
+  { id: "fz",  name: "From Zero",           year: 2024, color: "#b47cff" },
 ];
 
 const SONGS = [

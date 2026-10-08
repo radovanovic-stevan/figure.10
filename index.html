@@ -4,67 +4,85 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>How Linkin Do You Park?</title>
-  <meta name="description" content="A Linkin Park lyrics quiz: name the song from a lyric.">
+  <meta name="description" content="An 8-bit Linkin Park lyrics quiz: name the song from the lyric.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <canvas id="bg" aria-hidden="true"></canvas>
+
+  <div class="sound">
+    <button id="sound-btn" class="chip" aria-pressed="true" title="Toggle sound">♪ ON</button>
+    <input id="volume" type="range" min="0" max="1" step="0.05" value="0.6" aria-label="Volume">
+  </div>
+
   <main>
     <header>
-      <h1>How <span>Linkin</span> Do You Park?</h1>
-      <p class="tagline">Name the song from the lyric.</p>
+      <h1 class="glitch" data-text="HOW LINKIN DO YOU PARK?">HOW <span>LINKIN</span> DO YOU PARK?</h1>
+      <p class="tagline">&gt; NAME THE SONG FROM THE LYRIC<span class="cursor">_</span></p>
     </header>
 
     <!-- Start screen -->
-    <section id="start" class="card">
-      <h2>Pick your albums</h2>
+    <section id="start" class="panel">
+      <h2>SELECT ALBUMS</h2>
       <div id="album-list" class="albums"></div>
       <div class="row">
-        <label for="count">Questions</label>
-        <select id="count">
-          <option>5</option>
-          <option selected>10</option>
-          <option>15</option>
-          <option>20</option>
-        </select>
+        <span class="label">STAGES</span>
+        <div id="count" class="seg" role="radiogroup" aria-label="Number of questions">
+          <button type="button" role="radio" aria-checked="false" data-n="5">5</button>
+          <button type="button" role="radio" aria-checked="true" data-n="10">10</button>
+          <button type="button" role="radio" aria-checked="false" data-n="15">15</button>
+          <button type="button" role="radio" aria-checked="false" data-n="20">20</button>
+        </div>
       </div>
+      <p id="best" class="best" hidden></p>
       <p id="start-error" class="error" hidden></p>
-      <button id="start-btn" class="primary">Start</button>
+      <button id="start-btn" class="btn primary blink-hover">PRESS START</button>
     </section>
 
     <!-- Question screen -->
-    <section id="quiz" class="card" hidden>
-      <div class="progress">
-        <span id="q-number"></span>
-        <span id="q-score"></span>
+    <section id="quiz" class="panel" hidden>
+      <div class="hud">
+        <span>STAGE <b id="q-number"></b></span>
+        <span>SCORE <b id="q-score"></b></span>
       </div>
-      <div class="bar"><div id="bar-fill"></div></div>
+      <div id="segments" class="segments"></div>
       <blockquote id="lyric"></blockquote>
       <form id="answer-form" autocomplete="off">
-        <input id="answer" type="text" placeholder="Song title…" aria-label="Song title" spellcheck="false">
+        <div class="input-wrap">
+          <span class="prompt">&gt;</span>
+          <input id="answer" type="text" placeholder="type the song title" aria-label="Song title" spellcheck="false">
+        </div>
         <div class="buttons">
-          <button type="button" id="hint-btn">Hint (album)</button>
-          <button type="submit" id="submit-btn" class="primary">Submit</button>
+          <button type="button" id="hint-btn" class="btn">HINT</button>
+          <button type="submit" id="submit-btn" class="btn primary">ENTER</button>
         </div>
       </form>
       <p id="hint" class="hint" hidden></p>
       <div id="feedback" class="feedback" hidden></div>
-      <button id="next-btn" class="primary" hidden>Next</button>
+      <button id="next-btn" class="btn primary" hidden>NEXT &gt;</button>
     </section>
 
     <!-- Results screen -->
-    <section id="results" class="card" hidden>
+    <section id="results" class="panel" hidden>
+      <p class="over">GAME OVER</p>
       <h2 id="final-score"></h2>
-      <p id="verdict"></p>
+      <p id="rank" class="rank"></p>
+      <p id="verdict" class="verdict"></p>
       <ol id="review"></ol>
-      <button id="again-btn" class="primary">Play again</button>
+      <button id="again-btn" class="btn primary">PLAY AGAIN</button>
     </section>
 
     <footer>
-      Fan-made quiz. Lyrics are short excerpts; all songs © Linkin Park / Warner Records.
+      Fan-made quiz · original 8-bit soundtrack · lyrics are short excerpts, all songs © Linkin Park / Warner Records
     </footer>
   </main>
 
   <script src="songs.js"></script>
+  <script src="music.js"></script>
+  <script src="bg.js"></script>
   <script src="app.js"></script>
 </body>
 </html>
