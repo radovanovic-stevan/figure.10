@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>How Linkin Do You Park?</title>
+  <meta name="description" content="A Linkin Park lyrics quiz: name the song from a lyric.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <header>
+      <h1>How <span>Linkin</span> Do You Park?</h1>
+      <p class="tagline">Name the song from the lyric.</p>
+    </header>
+
+    <!-- Start screen -->
+    <section id="start" class="card">
+      <h2>Pick your albums</h2>
+      <div id="album-list" class="albums"></div>
+      <div class="row">
+        <label for="count">Questions</label>
+        <select id="count">
+          <option>5</option>
+          <option selected>10</option>
+          <option>15</option>
+          <option>20</option>
+        </select>
+      </div>
+      <p id="start-error" class="error" hidden></p>
+      <button id="start-btn" class="primary">Start</button>
+    </section>
+
+    <!-- Question screen -->
+    <section id="quiz" class="card" hidden>
+      <div class="progress">
+        <span id="q-number"></span>
+        <span id="q-score"></span>
+      </div>
+      <div class="bar"><div id="bar-fill"></div></div>
+      <blockquote id="lyric"></blockquote>
+      <form id="answer-form" autocomplete="off">
+        <input id="answer" type="text" placeholder="Song title…" aria-label="Song title" spellcheck="false">
+        <div class="buttons">
+          <button type="button" id="hint-btn">Hint (album)</button>
+          <button type="submit" id="submit-btn" class="primary">Submit</button>
+        </div>
+      </form>
+      <p id="hint" class="hint" hidden></p>
+      <div id="feedback" class="feedback" hidden></div>
+      <button id="next-btn" class="primary" hidden>Next</button>
+    </section>
+
+    <!-- Results screen -->
+    <section id="results" class="card" hidden>
+      <h2 id="final-score"></h2>
+      <p id="verdict"></p>
+      <ol id="review"></ol>
+      <button id="again-btn" class="primary">Play again</button>
+    </section>
+
+    <footer>
+      Fan-made quiz. Lyrics are short excerpts; all songs © Linkin Park / Warner Records.
+    </footer>
+  </main>
+
+  <script src="songs.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
