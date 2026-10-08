@@ -8,7 +8,8 @@ Living Things, The Hunting Party, One More Light and From Zero — 83 songs, 3 e
 
 ## Hosting on GitHub Pages
 
-Settings → Pages → Source: "Deploy from a branch" → `main` / `(root)`.
+Deployed by `.github/workflows/pages.yml` on every push to `main` (or run it manually from the Actions tab).
+One-time setup: Settings → Pages → Source: **GitHub Actions**.
 
 ## Running locally
 
